@@ -1,13 +1,12 @@
 {
-  "name": "vite-project",
-  "private": true,
-  "version": "0.0.0",
+  "name": "npm-scripts-create-file",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "create:component": "mkdir ./src/components/$npm_config_name && mkdir ./src/components/$npm_config_name/Layout && cat ./npm-templates/layout.jsx | sed s/PLACEHOLDER/$npm_config_name/g > ./src/components/$npm_config_name/Layout/index.jsx && cat ./npm-templates/component.jsx | sed s/PLACEHOLDER/$npm_config_name/g > ./src/components/$npm_config_name/index.jsx && mkdir ./src/components/$npm_config_name/Style && touch ./src/components/$npm_config_name/Style/index.css"
+    "create:component": "mkdir -p ./src/components/$npm_config_name/Layout ./src/components/$npm_config_name/Style && sed s/PLACEHOLDER/$npm_config_name/g ./npm-templates/layout.jsx > ./src/components/$npm_config_name/Layout/index.jsx && sed s/PLACEHOLDER/$npm_config_name/g ./npm-templates/component.jsx > ./src/components/$npm_config_name/index.jsx && touch ./src/components/$npm_config_name/Style/index.css"
   },
   "dependencies": {
     "react": "^18.2.0",
