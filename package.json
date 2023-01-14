@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "create:component": "mkdir ./src/components/$npm_config_name && mkdir ./src/components/$npm_config_name/Layout && cat ./npm-templates/layout.jsx | sed s/PLACEHOLDER/$npm_config_name/g > ./src/components/$npm_config_name/Layout/index.jsx && cat ./npm-templates/component.jsx | sed s/PLACEHOLDER/$npm_config_name/g > ./src/components/$npm_config_name/index.jsx && mkdir ./src/components/$npm_config_name/Style && touch ./src/components/$npm_config_name/Style/index.css"
   },
   "dependencies": {
     "react": "^18.2.0",
